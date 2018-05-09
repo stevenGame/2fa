@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome  #{name}! status: #{loginStatus}!
+  img(src='#{qr_url}')
+  //register form
+  form(method='POST' action='/')
+    div.form-group
+      label(for='token') Google Token:
+      input#token.form-control( placeholder='token' name='token')
+   
+    button.btn.btn-primary(type='submit') Log in
